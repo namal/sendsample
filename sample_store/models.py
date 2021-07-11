@@ -10,4 +10,4 @@ class Style(models.Model):
     color = models.CharField(max_length=255)
     size = models.CharField(max_length=255)
     size_wise_qty = models.IntegerField()
-    date_add = models.DateTimeField(auto_new_add=True)
+    date_add = models.DateTimeField(auto_now_add=True)

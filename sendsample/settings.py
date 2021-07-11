@@ -39,6 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'issuesample',
     'requestsample',
+    'sample_store',
+    'master',
+
+
 ]
 
 MIDDLEWARE = [

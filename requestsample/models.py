@@ -33,7 +33,7 @@ class Request(models.Model):
     decision = models.IntegerField(
         max_length=1, choices=DECISIONS_CATOGARY, default=0)
     remark = models.TextField()
-    date_add = models.DateTimeField(auto_new_add=True)
+    date_add = models.DateTimeField(auto_now_add=True)
 
 
 class Request_QTY(models.Model):
@@ -43,4 +43,4 @@ class Request_QTY(models.Model):
     color = models.CharField(max_length=255)
     size = models.CharField(max_length=255)
     size_wise_qty = models.IntegerField()
-    date_add = models.DateTimeField(auto_new_add=True)
+    date_add = models.DateTimeField(auto_now_add=True)

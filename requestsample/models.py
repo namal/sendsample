@@ -1,5 +1,5 @@
 from django.db import models
-# from master.models import Purpose
+from master.models import Purpose
 # app : requestsample
 
 # Request
@@ -19,28 +19,28 @@ from django.db import models
 # ---> create_by
 
 
-# class Request(models.Model):
+class Request(models.Model):
 
-#     DECISIONS_CATOGARY = [
-#         ('1', 'Approved'),
-#         ('0', 'Reject'),
-#     ]
-#     purpose = models.ForeignKey(
-#         Purpose, on_delete=models.CASCADE)
-#     buyer = models.CharField(max_length=255)
-#     season = models.CharField(max_length=255)
-#     style = models.CharField(max_length=255)
-#     decision = models.IntegerField(
-#         max_length=1, choices=DECISIONS_CATOGARY, default=0)
-#     remark = models.TextField()
-#     date_add = models.DateTimeField(auto_now_add=True)
+    DECISIONS_CATOGARY = [
+        ('1', 'Approved'),
+        ('0', 'Reject'),
+    ]
+    purpose = models.ForeignKey(
+        Purpose, on_delete=models.CASCADE)
+    buyer = models.CharField(max_length=255)
+    season = models.CharField(max_length=255)
+    style = models.CharField(max_length=255)
+    decision = models.IntegerField(
+        max_length=1, choices=DECISIONS_CATOGARY, default=0)
+    remark = models.TextField()
+    date_add = models.DateTimeField(auto_now_add=True)
 
 
-# class Request_QTY(models.Model):
-#     request = models.ForeignKey(
-#         Request, on_delete=models.CASCADE)
-#     delivery = models.CharField(max_length=255)
-#     color = models.CharField(max_length=255)
-#     size = models.CharField(max_length=255)
-#     size_wise_qty = models.IntegerField()
-#     date_add = models.DateTimeField(auto_now_add=True)
+class Request_QTY(models.Model):
+    request = models.ForeignKey(
+        Request, on_delete=models.CASCADE)
+    delivery = models.CharField(max_length=255)
+    color = models.CharField(max_length=255)
+    size = models.CharField(max_length=255)
+    size_wise_qty = models.IntegerField()
+    date_add = models.DateTimeField(auto_now_add=True)

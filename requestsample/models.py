@@ -31,7 +31,7 @@ class Request(models.Model):
     season = models.CharField(max_length=255)
     style = models.CharField(max_length=255)
     decision = models.IntegerField(
-        max_length=1, choices=DECISIONS_CATOGARY, default=0)
+        choices=DECISIONS_CATOGARY, default=0)
     remark = models.TextField()
     date_add = models.DateTimeField(auto_now_add=True)
 
